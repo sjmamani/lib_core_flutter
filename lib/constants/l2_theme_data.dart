@@ -67,6 +67,11 @@ class L2ThemeData {
               return L2Colors.rojoSeguro;
             },
           ),
+          elevation: MaterialStateProperty.resolveWith<double?>(
+            (Set<MaterialState> states) {
+              return 0.0;
+            },
+          ),
           foregroundColor: MaterialStateProperty.resolveWith<Color?>(
             (Set<MaterialState> states) {
               return Colors.white;
@@ -247,6 +252,11 @@ class L2ThemeData {
                 return L2Colors.darkRojoSeguro.withOpacity(0.5);
               }
               return L2Colors.darkRojoSeguro;
+            },
+          ),
+          elevation: MaterialStateProperty.resolveWith<double?>(
+            (Set<MaterialState> states) {
+              return 0.0;
             },
           ),
           foregroundColor: MaterialStateProperty.resolveWith<Color?>(
