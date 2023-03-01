@@ -131,6 +131,25 @@ class L2ThemeData {
           ),
         ),
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+              return L2Colors.cerulean;
+            },
+          ),
+          textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+            (Set<MaterialState> states) {
+              return L2TextStyles.bodyMedium.copyWith(height: 0);
+            },
+          ),
+          padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
+            (Set<MaterialState> states) {
+              return const EdgeInsets.symmetric(vertical: 10);
+            },
+          ),
+        ),
+      ),
       errorColor: L2Colors.error,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: L2Colors.licorice,
@@ -327,6 +346,25 @@ class L2ThemeData {
                 borderRadius: BorderRadius.circular(8),
                 side: const BorderSide(color: L2Colors.water, width: 1.0),
               );
+            },
+          ),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+              return L2Colors.darkCerulean;
+            },
+          ),
+          textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+            (Set<MaterialState> states) {
+              return L2TextStyles.bodyMedium.copyWith(height: 0);
+            },
+          ),
+          padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
+            (Set<MaterialState> states) {
+              return const EdgeInsets.symmetric(vertical: 10);
             },
           ),
         ),

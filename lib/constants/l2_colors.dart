@@ -14,6 +14,7 @@ class L2Colors {
   static const Color vermilion = Color(0xffff593e);
   static const Color viridian = Color(0xff3ac792);
   static const Color cerulean = Color(0xff4183ca);
+  static const Color darkCerulean = Color(0xff97c6eb);
   static const Color cinnamon = Color(0xff512420);
 
   // Grays
