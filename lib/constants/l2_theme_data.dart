@@ -138,6 +138,11 @@ class L2ThemeData {
               return L2Colors.cerulean;
             },
           ),
+          overlayColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+              return L2Colors.cerulean.withOpacity(0.1);
+            },
+          ),
           textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
             (Set<MaterialState> states) {
               return L2TextStyles.bodyMedium.copyWith(height: 0);
@@ -355,6 +360,11 @@ class L2ThemeData {
           foregroundColor: MaterialStateProperty.resolveWith<Color?>(
             (Set<MaterialState> states) {
               return L2Colors.darkCerulean;
+            },
+          ),
+          overlayColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+              return L2Colors.darkCerulean.withOpacity(0.1);
             },
           ),
           textStyle: MaterialStateProperty.resolveWith<TextStyle?>(

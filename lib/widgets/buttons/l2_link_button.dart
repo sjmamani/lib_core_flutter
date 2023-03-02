@@ -21,10 +21,7 @@ class L2LinkButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints.tightFor(
-        width: width,
-        height: height,
-      ),
+      constraints: BoxConstraints.tightFor(width: width, height: height),
       child: TextButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
