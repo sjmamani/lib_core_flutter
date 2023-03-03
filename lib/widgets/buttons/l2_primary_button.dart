@@ -25,17 +25,20 @@ class L2PrimaryButton extends StatelessWidget {
         width: width,
         height: height,
       ),
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          foregroundColor: textColor,
-          backgroundColor: color,
-          disabledForegroundColor:
-              color == null ? null : color!.withOpacity(0.38),
-          disabledBackgroundColor:
-              color == null ? null : color!.withOpacity(0.12),
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: ElevatedButton(
+          onPressed: onPressed,
+          style: ElevatedButton.styleFrom(
+            foregroundColor: textColor,
+            backgroundColor: color,
+            disabledForegroundColor:
+                color == null ? null : color!.withOpacity(0.38),
+            disabledBackgroundColor:
+                color == null ? null : color!.withOpacity(0.12),
+          ),
+          child: child,
         ),
-        child: child,
       ),
     );
   }
