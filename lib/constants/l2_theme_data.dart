@@ -112,7 +112,7 @@ class L2ThemeData {
           ),
           overlayColor: MaterialStateProperty.resolveWith<Color?>(
             (Set<MaterialState> states) {
-              return Colors.transparent;
+              return L2Colors.rojoSeguro.withOpacity(0.1);
             },
           ),
           textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
