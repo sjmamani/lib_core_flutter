@@ -110,11 +110,6 @@ class L2ThemeData {
               return L2Colors.rojoSeguro;
             },
           ),
-          overlayColor: MaterialStateProperty.resolveWith<Color?>(
-            (Set<MaterialState> states) {
-              return L2Colors.rojoSeguro.withOpacity(0.5);
-            },
-          ),
           textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
             (Set<MaterialState> states) {
               return L2TextStyles.bodyMediumBold.copyWith(height: 0);
@@ -127,6 +122,15 @@ class L2ThemeData {
           ),
           shape: MaterialStateProperty.resolveWith<OutlinedBorder?>(
             (Set<MaterialState> states) {
+              if (states.contains(MaterialState.pressed)) {
+                return RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  side: const BorderSide(
+                    color: L2Colors.rojoSeguro,
+                    width: 1.0,
+                  ),
+                );
+              }
               return RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
                 side: const BorderSide(color: L2Colors.water, width: 1.0),
