@@ -6,7 +6,10 @@ void main() {
   testWidgets('L2PrimaryButton has a child with a Text widget', (tester) async {
     const childWidget = Text('Test');
 
-    await tester.pumpWidget(const L2PrimaryButton(child: childWidget));
+    await tester.pumpWidget(L2PrimaryButton(
+      child: childWidget,
+      onPressed: () {},
+    ));
 
     expect(find.byWidget(childWidget), findsOneWidget);
     expect(find.text('Test'), findsOneWidget);

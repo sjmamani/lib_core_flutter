@@ -4,11 +4,11 @@ class L2SecondaryButton extends StatelessWidget {
   const L2SecondaryButton({
     Key? key,
     required this.child,
+    required this.onPressed,
     this.height = 41,
     this.width = double.infinity,
     this.color,
     this.textColor,
-    this.onPressed,
   }) : super(key: key);
 
   final Widget child;

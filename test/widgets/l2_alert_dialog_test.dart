@@ -117,10 +117,13 @@ void main() {
 
     showL2AlertDialog(
       scaffoldKey.currentContext!,
-      const L2AlertDialog(
+      L2AlertDialog(
         content: childWidget,
         title: 'Test title',
-        actionButton: L2PrimaryButton(child: Text('Aceptar')),
+        actionButton: L2PrimaryButton(
+          child: const Text('Aceptar'),
+          onPressed: () {},
+        ),
       ),
     );
 
@@ -150,11 +153,14 @@ void main() {
 
     showL2AlertDialog(
       scaffoldKey.currentContext!,
-      const L2AlertDialog(
+      L2AlertDialog(
         content: childWidget,
         title: 'Test title',
         textCancelButton: 'Volver',
-        actionButton: L2PrimaryButton(child: Text('Aceptar')),
+        actionButton: L2PrimaryButton(
+          child: const Text('Aceptar'),
+          onPressed: () {},
+        ),
       ),
     );
 

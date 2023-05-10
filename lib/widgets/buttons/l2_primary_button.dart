@@ -4,11 +4,11 @@ class L2PrimaryButton extends StatelessWidget {
   const L2PrimaryButton({
     Key? key,
     required this.child,
+    required this.onPressed,
     this.height = 41,
     this.width = double.infinity,
     this.color,
     this.textColor,
-    this.onPressed,
   }) : super(key: key);
 
   final Widget child;
