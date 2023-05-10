@@ -18,7 +18,6 @@ class L2ThemeData {
           color: L2Colors.licorice,
         ),
       ),
-      backgroundColor: L2Colors.background,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.white,
         elevation: 10,
@@ -160,7 +159,6 @@ class L2ThemeData {
           ),
         ),
       ),
-      errorColor: L2Colors.error,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: L2Colors.licorice,
         foregroundColor: L2Colors.alice,
@@ -210,10 +208,47 @@ class L2ThemeData {
         cursorColor: L2Colors.licorice,
       ),
       textTheme: TextTheme(
-        subtitle1: L2TextStyles.bodyLarge,
-        bodyText2: L2TextStyles.bodyLarge,
+        titleMedium: L2TextStyles.bodyLarge,
+        bodyMedium: L2TextStyles.bodyLarge,
       ),
-      toggleableActiveColor: L2Colors.rojoSeguro,
+      colorScheme: const ColorScheme.light(
+        background: L2Colors.background,
+        error: L2Colors.error,
+      ),
+      switchTheme: SwitchThemeData(
+        thumbColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+          if (states.contains(MaterialState.disabled)) {
+            return null;
+          }
+          if (states.contains(MaterialState.selected)) {
+            return L2Colors.rojoSeguro;
+          }
+          return null;
+        }),
+        trackColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+          if (states.contains(MaterialState.disabled)) {
+            return null;
+          }
+          if (states.contains(MaterialState.selected)) {
+            return L2Colors.rojoSeguro;
+          }
+          return null;
+        }),
+      ),
+      radioTheme: RadioThemeData(
+        fillColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+          if (states.contains(MaterialState.disabled)) {
+            return null;
+          }
+          if (states.contains(MaterialState.selected)) {
+            return L2Colors.rojoSeguro;
+          }
+          return null;
+        }),
+      ),
     );
   }
 
@@ -228,7 +263,6 @@ class L2ThemeData {
         elevation: 4,
       ),
       applyElevationOverlayColor: true,
-      backgroundColor: L2Colors.darkBackground,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: L2Colors.darkBackground,
         elevation: 8,
@@ -243,10 +277,6 @@ class L2ThemeData {
         backgroundColor: L2Colors.darkBackground,
       ),
       brightness: Brightness.dark,
-      colorScheme: const ColorScheme.dark(
-        primary: L2Colors.darkRojoSeguro,
-        secondary: L2Colors.darkRojoSeguro,
-      ),
       checkboxTheme: CheckboxThemeData(
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         checkColor: MaterialStateProperty.resolveWith<Color?>(
@@ -384,7 +414,6 @@ class L2ThemeData {
           ),
         ),
       ),
-      errorColor: L2Colors.darkError,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: L2Colors.cromaticGrey,
         foregroundColor: Colors.black,
@@ -448,14 +477,41 @@ class L2ThemeData {
         cursorColor: L2Colors.mischka,
       ),
       textTheme: TextTheme(
-        subtitle1: L2TextStyles.bodyLarge.copyWith(
+        titleMedium: L2TextStyles.bodyLarge.copyWith(
           color: L2Colors.highEmphasis,
         ),
-        bodyText2: L2TextStyles.bodyLarge.copyWith(
+        bodyMedium: L2TextStyles.bodyLarge.copyWith(
           color: L2Colors.highEmphasis,
         ),
       ),
-      toggleableActiveColor: L2Colors.darkRojoSeguro,
+      switchTheme: SwitchThemeData(
+        thumbColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+          if (states.contains(MaterialState.disabled)) {
+            return null;
+          }
+          if (states.contains(MaterialState.selected)) {
+            return L2Colors.darkRojoSeguro;
+          }
+          return null;
+        }),
+        trackColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+          if (states.contains(MaterialState.disabled)) {
+            return null;
+          }
+          if (states.contains(MaterialState.selected)) {
+            return L2Colors.darkRojoSeguro;
+          }
+          return null;
+        }),
+      ),
+      colorScheme: const ColorScheme.dark(
+        background: L2Colors.darkBackground,
+        error: L2Colors.darkError,
+        primary: L2Colors.darkRojoSeguro,
+        secondary: L2Colors.darkRojoSeguro,
+      ),
     );
   }
 }
