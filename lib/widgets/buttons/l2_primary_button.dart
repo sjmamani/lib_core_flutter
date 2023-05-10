@@ -21,10 +21,7 @@ class L2PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints.tightFor(
-        width: width,
-        height: height,
-      ),
+      constraints: BoxConstraints.tightFor(width: width, height: height),
       child: Directionality(
         textDirection: TextDirection.ltr,
         child: ElevatedButton(

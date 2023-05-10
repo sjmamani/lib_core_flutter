@@ -38,6 +38,7 @@ class L2AlertDialog extends StatelessWidget {
     final isLightMode =
         MediaQuery.of(context).platformBrightness == Brightness.light;
     return AlertDialog(
+      titlePadding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
       contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
       title: title != null ? Text(title!, textAlign: TextAlign.center) : null,
       titleTextStyle: titleStyle?.copyWith(
