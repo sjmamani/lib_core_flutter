@@ -209,9 +209,10 @@ class L2ThemeData {
       scaffoldBackgroundColor: L2Colors.alice,
       snackBarTheme: SnackBarThemeData(
         backgroundColor: L2Colors.licorice,
-        contentTextStyle: L2TextStyles.bodySmall.copyWith(
+        contentTextStyle: L2TextStyles.bodyMedium.copyWith(
           color: Colors.white,
         ),
+        actionTextColor: L2Colors.rojoSeguro,
       ),
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: L2Colors.licorice,
@@ -478,9 +479,10 @@ class L2ThemeData {
       scaffoldBackgroundColor: L2Colors.darkBackground,
       snackBarTheme: SnackBarThemeData(
         backgroundColor: L2Colors.highEmphasis,
-        contentTextStyle: L2TextStyles.bodySmall.copyWith(
+        contentTextStyle: L2TextStyles.bodyMedium.copyWith(
           color: Colors.black,
         ),
+        actionTextColor: L2Colors.darkRojoSeguro,
       ),
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: L2Colors.mischka,
